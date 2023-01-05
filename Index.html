@@ -5,54 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <link rel="icon" type="imagem/png" href="./img/CGEC_logo.png" />
+    <!--    Link to CSS -->
+    <link rel="stylesheet" type="text/css" href="./Assets/css/main.css">
+    <!--    Page Icon   -->
+    <link rel="icon" type="imagem/png" href="./Assets/img/CGEC_logo.png" />
+    <!--    Box Icons   -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <title>CGEC Code</title>
 </head>
 
 <body class="home">
+    <!-- Link to JS-->
+    <script src="./Assets/js/script.js"></script>
+
+
     <header class="top_side">
 
-        <button class="logo" onclick="location.href='./index.html'">
+        <button class="logo" onclick="location.href='./Assets/html/index.html'">
         </button>
 
-        <button class="bt_log" onclick="location.href='./login.html'">
+        <button class="bt_log" onclick="location.href='./Assets/html/login.html'">
             Login
         </button>
     </header>
     <div class="content">
         <div class="slide">
-            <input class="sr" type="radio" name="slide" id="sr1" checked>
-            <input class="sr" type="radio" name="slide" id="sr2">
-            <input class="sr" type="radio" name="slide" id="sr3">
-            <input class="sr" type="radio" name="slide" id="sr4">
-            <input class="sr" type="radio" name="slide" id="sr5">
+            <input class="slide_radio" type="radio" name="slide" id="slide_radio_1" checked>
+            <input class="slide_radio" type="radio" name="slide" id="slide_radio_2">
+            <input class="slide_radio" type="radio" name="slide" id="slide_radio_3">
+            <input class="slide_radio" type="radio" name="slide" id="slide_radio_4">
+            <input class="slide_radio" type="radio" name="slide" id="slide_radio_5">
 
-            <div class="sl s_1">
-                <img src="./img/1.jpg" alt="">
+            <div class="slide_image s_1">
+                <img src="./Assets/img/1.jpg" alt="">
             </div>
-            <div class="sl s_other">
-                <img src="./img/2.jpg" alt="">
+            <div class="slide_image s_other">
+                <img src="./Assets/img/2.jpg" alt="">
             </div>
-            <div class="sl s_other">
-                <img src="./img/3.jpg" alt="">
+            <div class="slide_image s_other">
+                <img src="./Assets/img/3.jpg" alt="">
             </div>
-            <div class="sl s_other">
-                <img src="./img/4.jpg" alt="">
+            <div class="slide_image s_other">
+                <img src="./Assets/img/4.jpg" alt="">
             </div>
-            <div class="sl s_other">
-                <img src="./img/5.jpg" alt="">
+            <div class="slide_image s_other">
+                <img src="./Assets/img/5.jpg" alt="">
             </div>
         </div>
 
         <div class="nav_bar">
-            <label class="bar" for="sr1"></label>
-            <label class="bar" for="sr2"></label>
-            <label class="bar" for="sr3"></label>
-            <label class="bar" for="sr4"></label>
-            <label class="bar" for="sr5"></label>
+            <label class="bar" for="slide_radio_1"></label>
+            <label class="bar" for="slide_radio_2"></label>
+            <label class="bar" for="slide_radio_3"></label>
+            <label class="bar" for="slide_radio_4"></label>
+            <label class="bar" for="slide_radio_5"></label>
         </div>
     </div>
 </body>

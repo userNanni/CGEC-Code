@@ -1,0 +1,327 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    box-sizing: border-box;
+}
+
+/* Variable */
+:root {
+    --bg-color: #D9D9D9;
+    --container-color: #252525;
+    --text-color: #171717;
+    --second-color: #fd8f44;
+    --top_bar-height: 12%;
+    --sl_bar-delay: .3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 3rem 0 2rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+/* Topo da Página Inicial*/
+.home {
+    background: var(--bg-color);
+}
+
+.top_side {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: var(--top_bar-height);
+    background: var(--container-color);
+}
+
+.logo {
+    position: relative;
+    top: 25%;
+    left: calc(var(--top_bar-height)*1.5);
+    height: 150%;
+    aspect-ratio: 1;
+    background-color: var(--container-color);
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background-image: url(../Assets/img/CGEC_logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bt_log {
+    position: fixed;
+    top: calc(var(--top_bar-height)*0.25);
+    right: 10%;
+    height: calc(var(--top_bar-height)*0.5);
+    width: 24%;
+    background-color: var(--bg-color);
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transform: translate(-50% -50%);
+}
+
+/* Apresentação de Slide */
+.content {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    height: 80%;
+    border-radius: 60px;
+    z-index: -1;
+    background: var(--top_bar-color);
+    overflow: hidden;
+}
+
+.nav_bar {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+
+.bar {
+    width: 70px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--bg-color);
+    margin: 10px;
+    cursor: pointer;
+    transition: var(--sl_bar-delay);
+
+}
+
+.bar:hover {
+    background-color: var(--bg-color);
+}
+
+.slide_radio {
+    display: none;
+}
+
+.slide {
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+
+.slide_image {
+    width: 20%;
+    transition: var(--sl_bar-delay);
+}
+
+.slide_image img {
+    position: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#slide_radio_1:checked~.s_1 {
+    margin-left: 0;
+}
+
+#slide_radio_2:checked~.s_1 {
+    margin-left: -20%
+}
+
+#slide_radio_3:checked~.s_1 {
+    margin-left: -40%
+}
+
+#slide_radio_4:checked~.s_1 {
+    margin-left: -60%
+}
+
+#slide_radio_5:checked~.s_1 {
+    margin-left: -80%
+}
+
+/* tela de Login */
+
+.main_login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--top_bar-color);
+
+}
+
+.left_login {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.left_login>h1 {
+    color: var(--bg-color);
+    font-family: "Roboto Mono";
+    font-size: 2.5vw;
+}
+
+.left_login_img {
+    width: 35vw;
+}
+
+.right_login {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_login {
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 3% 6%;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.card_login>h1 {
+    color: var(--top_bar-color);
+    font-family: "Roboto Mono";
+    font-weight: bolder;
+    margin: 0;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+}
+
+.textfield>input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #515151;
+    font-family: "Roboto Mono";
+    font-size: 12pt;
+    color: #f0f0f0de;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield>label {
+    font-family: "Roboto Mono";
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.textfield>input::placeholder {
+    font-family: "Roboto Mono";
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.bt_login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-transform: uppercase;
+    color: var(--bg-color);
+    font-family: "Roboto Mono";
+    font-weight: bolder;
+    background-color: var(--top_bar-color);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00000056;
+}
+
+.bt_login:hover {
+    filter: invert(100%);
+    box-shadow: 0px 0px 30px -18px #ffffffde inset;
+}
+
+@media only screen and (max-width:950px) {
+    .card_login {
+        width: 85%;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .main_login {
+        flex-direction: column;
+    }
+
+    .left_login {
+        width: 100%;
+        height: auto;
+    }
+
+    .left_login>h1 {
+        display: none;
+    }
+
+    .left_login_img {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 50vw;
+        height: auto;
+    }
+
+    .right_login {
+        width: 100%;
+        height: auto;
+    }
+
+    .card_login {
+        width: 90%;
+    }
+
+}
